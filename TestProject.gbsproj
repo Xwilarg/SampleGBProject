@@ -3615,7 +3615,7 @@
                     "command": "EVENT_VARIABLE_MATH_EVALUATE",
                     "args": {
                         "variable": "1",
-                        "expression": "4 * ($Index % 4 * 4) "
+                        "expression": "3 + ($V0$ % 4 * 4) "
                     },
                     "id": "23cc3bd4-e5c2-4a15-9daf-2d14179a0457"
                 },
@@ -3623,7 +3623,7 @@
                     "command": "EVENT_VARIABLE_MATH_EVALUATE",
                     "args": {
                         "variable": "2",
-                        "expression": "3 * ($Index / 4 * 4) "
+                        "expression": "2 + ($V0$ / 4 * 4) "
                     },
                     "id": "6b3b4e6f-3c91-439e-96a1-f2e5a91c8a54"
                 },
@@ -3764,9 +3764,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
-        "worldScrollY": 0,
-        "zoom": 175,
+        "worldScrollX": 213,
+        "worldScrollY": 192,
+        "zoom": 325,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
