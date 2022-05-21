@@ -32,14 +32,22 @@
                     "paletteId": "",
                     "isPinned": false,
                     "script": [],
-                    "startScript": [],
+                    "startScript": [
+                        {
+                            "command": "EVENT_ACTOR_HIDE",
+                            "args": {
+                                "actorId": "$self$"
+                            },
+                            "id": "377a71e8-9629-4a59-862f-39d6f5edf5f6"
+                        }
+                    ],
                     "updateScript": [],
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "fe21d79c-1604-40bd-8896-20cc50e7898e",
-                    "x": 9,
-                    "y": 9
+                    "x": 7,
+                    "y": 12
                 }
             ],
             "triggers": [],
@@ -269,14 +277,14 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "House.png",
-            "checksum": "e8e9bd1bd0e9739159ee0e1eab9b73ea7c394462",
+            "checksum": "41f301764c34053a513066fa6ce95f387b4664c4",
             "width": 48,
             "height": 48,
             "states": [
                 {
                     "id": "55258bf0-7791-4d25-a9fb-3b35d170e70e",
                     "name": "",
-                    "animationType": "multi_movement",
+                    "animationType": "fixed",
                     "flipLeft": true,
                     "animations": [
                         {
@@ -589,7 +597,7 @@
                     ]
                 }
             ],
-            "numTiles": 14,
+            "numTiles": 13,
             "canvasWidth": 48,
             "canvasHeight": 48,
             "boundsX": -16,
@@ -1629,7 +1637,7 @@
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 1594,
-        "worldScrollY": 438,
+        "worldScrollY": 437,
         "zoom": 500,
         "customColorsEnabled": false,
         "sgbEnabled": false,
