@@ -559,7 +559,7 @@
                                     "customEventId": "e7591a96-1bae-433f-8336-201bb05eeb74",
                                     "$variable[0]$": "L0",
                                     "$variable[1]$": "T0",
-                                    "$variable[2]$": "T0"
+                                    "$variable[2]$": "T1"
                                 },
                                 "id": "3a26812b-cec5-48dd-8ea3-9e230c7a7546"
                             }
@@ -592,7 +592,7 @@
                                     "customEventId": "e7591a96-1bae-433f-8336-201bb05eeb74",
                                     "$variable[0]$": "L0",
                                     "$variable[1]$": "T0",
-                                    "$variable[2]$": "T0"
+                                    "$variable[2]$": "T1"
                                 },
                                 "id": "9315d68a-2aa9-4c90-8da5-a302c8daad25"
                             }
@@ -631,7 +631,7 @@
                                     "customEventId": "e7591a96-1bae-433f-8336-201bb05eeb74",
                                     "$variable[0]$": "L0",
                                     "$variable[1]$": "T0",
-                                    "$variable[2]$": "T0"
+                                    "$variable[2]$": "T1"
                                 },
                                 "id": "5d920ea1-d9df-4523-a0ba-a94123c01c63"
                             }
@@ -670,7 +670,7 @@
                                     "customEventId": "e7591a96-1bae-433f-8336-201bb05eeb74",
                                     "$variable[0]$": "L0",
                                     "$variable[1]$": "T0",
-                                    "$variable[2]$": "T0"
+                                    "$variable[2]$": "T1"
                                 },
                                 "id": "56c9914b-dcea-48b2-80b7-1259ee6553ca"
                             }
@@ -3620,21 +3620,10 @@
                     "id": "23cc3bd4-e5c2-4a15-9daf-2d14179a0457"
                 },
                 {
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "IndexIndex is now\n$V0$",
-                            "Pos X is now\n$V1$"
-                        ],
-                        "avatarId": ""
-                    },
-                    "id": "88067853-60db-4a7c-bda5-b1acc9f439df"
-                },
-                {
                     "command": "EVENT_VARIABLE_MATH_EVALUATE",
                     "args": {
                         "variable": "2",
-                        "expression": "3 * $V0$"
+                        "expression": "3 * ($Index / 4 * 4) "
                     },
                     "id": "6b3b4e6f-3c91-439e-96a1-f2e5a91c8a54"
                 },
@@ -3775,9 +3764,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1207.2960205078125,
-        "worldScrollY": 199.67999267578125,
-        "zoom": 254.68748474121094,
+        "worldScrollX": 0,
+        "worldScrollY": 0,
+        "zoom": 175,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
@@ -3805,9 +3794,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            152,
             205,
-            349
+            275,
+            468
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
