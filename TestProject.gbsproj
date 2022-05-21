@@ -3,7 +3,28 @@
     "author": "xwila",
     "_version": "3.0.0",
     "_release": "1",
-    "scenes": [],
+    "scenes": [
+        {
+            "name": "Scene 1",
+            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+            "width": 20,
+            "height": 18,
+            "type": "TOPDOWN",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "autoFadeSpeed": 1,
+            "id": "3ac36634-e5db-4eef-8075-12cbdce781c0",
+            "x": 379,
+            "y": 109,
+            "actors": [],
+            "triggers": [],
+            "script": [],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": []
+        }
+    ],
     "backgrounds": [
         {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
@@ -912,17 +933,17 @@
         }
     ],
     "settings": {
-        "startSceneId": "",
+        "startSceneId": "3ac36634-e5db-4eef-8075-12cbdce781c0",
         "startX": 9,
-        "startY": 9,
+        "startY": 2,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
-        "worldScrollY": 0,
-        "zoom": 100,
+        "worldScrollX": 1098,
+        "worldScrollY": 273,
+        "zoom": 350,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
@@ -950,9 +971,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            443,
-            135,
-            135
+            590,
+            179,
+            179
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
