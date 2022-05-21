@@ -810,7 +810,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "You discovered\nthe Fire !"
+                                    "You found a candle"
                                 ],
                                 "avatarId": ""
                             },
@@ -3871,8 +3871,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
-        "worldScrollY": 9,
+        "worldScrollX": 1144,
+        "worldScrollY": 81,
         "zoom": 325,
         "customColorsEnabled": false,
         "sgbEnabled": false,
