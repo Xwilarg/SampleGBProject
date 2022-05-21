@@ -510,7 +510,67 @@
             "id": "d529d21f-75e7-43b8-b819-4b89db8c61d4",
             "x": 127.7492015614348,
             "y": 74.68478759122351,
-            "actors": [],
+            "actors": [
+                {
+                    "name": "WoodIcon",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "fd790e35-a1be-4c28-8df7-b72bb3cfcd80",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [],
+                    "startScript": [
+                        {
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "args": {
+                                "customEventId": "e6638e44-a9e4-41a2-a98d-4c61c87a3aca"
+                            },
+                            "id": "fd5a914f-03d1-4389-bf65-1c928224366b"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "0535814f-d75e-4aff-908b-c9252687f22f",
+                    "x": 3,
+                    "y": 3
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "c2ec7eed-42cd-46c5-b3dc-c92c4989430d",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [],
+                    "startScript": [
+                        {
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "args": {
+                                "customEventId": "e6638e44-a9e4-41a2-a98d-4c61c87a3aca",
+                                "$variable[0]$": "2"
+                            },
+                            "id": "a1b742b4-10d3-4b7c-bc4e-d26a979b6d48"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "8d8a2d2e-0ccb-4901-b1eb-55d528dcd724",
+                    "x": 7,
+                    "y": 3
+                }
+            ],
             "triggers": [],
             "script": [
                 {
@@ -686,7 +746,7 @@
             "autoFadeEventCollapse": false
         },
         {
-            "name": "Scene 3",
+            "name": "House",
             "backgroundId": "e4632a41-a17c-44c6-aa83-60a04bcb6eee",
             "width": 20,
             "height": 18,
@@ -3539,7 +3599,7 @@
         {
             "id": "e7591a96-1bae-433f-8336-201bb05eeb74",
             "name": "MoveInInventory",
-            "description": "",
+            "description": "Move the cursor in the inventory depending of thecurrent index",
             "variables": {
                 "0": {
                     "id": "0",
@@ -3643,6 +3703,53 @@
                         "useCollisions": false
                     },
                     "id": "9a311b10-e9fc-4907-9a90-a3d672af8123"
+                }
+            ]
+        },
+        {
+            "id": "e6638e44-a9e4-41a2-a98d-4c61c87a3aca",
+            "name": "Display Inv If Item Exists",
+            "description": "Display the item in the inventory if the player has it",
+            "variables": {
+                "0": {
+                    "id": "0",
+                    "name": "Item Variable"
+                }
+            },
+            "actors": {
+                "0": {
+                    "id": "0",
+                    "name": "Item Sprite"
+                }
+            },
+            "script": [
+                {
+                    "command": "EVENT_IF_TRUE",
+                    "args": {
+                        "variable": "0",
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_ACTOR_SHOW",
+                                "args": {
+                                    "actorId": "0"
+                                },
+                                "id": "897a9659-41a0-437c-8c4f-f4552c029bec"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_ACTOR_HIDE",
+                                "args": {
+                                    "actorId": "0"
+                                },
+                                "id": "86dff208-82f3-4ef3-920d-2b5b48b91f03"
+                            }
+                        ]
+                    },
+                    "id": "0b315f83-feed-437b-b86e-207a4dc7f607"
                 }
             ]
         }
@@ -3764,8 +3871,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 213,
-        "worldScrollY": 192,
+        "worldScrollX": 0,
+        "worldScrollY": 9,
         "zoom": 325,
         "customColorsEnabled": false,
         "sgbEnabled": false,
