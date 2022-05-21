@@ -557,7 +557,9 @@
                                 "command": "EVENT_CALL_CUSTOM_EVENT",
                                 "args": {
                                     "customEventId": "e7591a96-1bae-433f-8336-201bb05eeb74",
-                                    "$variable[0]$": "L0"
+                                    "$variable[0]$": "L0",
+                                    "$variable[1]$": "T0",
+                                    "$variable[2]$": "T0"
                                 },
                                 "id": "3a26812b-cec5-48dd-8ea3-9e230c7a7546"
                             }
@@ -588,7 +590,9 @@
                                 "command": "EVENT_CALL_CUSTOM_EVENT",
                                 "args": {
                                     "customEventId": "e7591a96-1bae-433f-8336-201bb05eeb74",
-                                    "$variable[0]$": "L0"
+                                    "$variable[0]$": "L0",
+                                    "$variable[1]$": "T0",
+                                    "$variable[2]$": "T0"
                                 },
                                 "id": "9315d68a-2aa9-4c90-8da5-a302c8daad25"
                             }
@@ -625,7 +629,9 @@
                                 "command": "EVENT_CALL_CUSTOM_EVENT",
                                 "args": {
                                     "customEventId": "e7591a96-1bae-433f-8336-201bb05eeb74",
-                                    "$variable[0]$": "L0"
+                                    "$variable[0]$": "L0",
+                                    "$variable[1]$": "T0",
+                                    "$variable[2]$": "T0"
                                 },
                                 "id": "5d920ea1-d9df-4523-a0ba-a94123c01c63"
                             }
@@ -662,7 +668,9 @@
                                 "command": "EVENT_CALL_CUSTOM_EVENT",
                                 "args": {
                                     "customEventId": "e7591a96-1bae-433f-8336-201bb05eeb74",
-                                    "$variable[0]$": "L0"
+                                    "$variable[0]$": "L0",
+                                    "$variable[1]$": "T0",
+                                    "$variable[2]$": "T0"
                                 },
                                 "id": "56c9914b-dcea-48b2-80b7-1259ee6553ca"
                             }
@@ -3238,14 +3246,17 @@
                 "0": {
                     "id": "0",
                     "name": "Index"
+                },
+                "1": {
+                    "id": "1",
+                    "name": "PlayerPosX"
+                },
+                "2": {
+                    "id": "2",
+                    "name": "PlayerPosY"
                 }
             },
-            "actors": {
-                "0": {
-                    "id": "0",
-                    "name": "Target"
-                }
-            },
+            "actors": {},
             "script": [
                 {
                     "command": "EVENT_IF_VALUE",
@@ -3303,16 +3314,32 @@
                     "id": "b80b3a26-77f9-425f-afb3-6de7d7cf827f"
                 },
                 {
+                    "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                    "args": {
+                        "variable": "1",
+                        "expression": "4 * ($Index % 4 * 4) "
+                    },
+                    "id": "23cc3bd4-e5c2-4a15-9daf-2d14179a0457"
+                },
+                {
+                    "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                    "args": {
+                        "variable": "2",
+                        "expression": "4 * ($Index / 4 * 4) "
+                    },
+                    "id": "6b3b4e6f-3c91-439e-96a1-f2e5a91c8a54"
+                },
+                {
                     "command": "EVENT_ACTOR_MOVE_TO",
                     "args": {
-                        "actorId": "0",
+                        "actorId": "player",
                         "x": {
-                            "type": "number",
-                            "value": 0
+                            "type": "variable",
+                            "value": "1"
                         },
                         "y": {
-                            "type": "number",
-                            "value": 0
+                            "type": "variable",
+                            "value": "2"
                         },
                         "moveType": "diagonal",
                         "useCollisions": false
